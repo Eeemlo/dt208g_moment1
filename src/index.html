@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT208G - Moment 1 - Kurslista</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="ts/main.js" defer></script>
+</head>
+
+<body>
+    <div class="head-container">
+        <div class="logo-container">
+            <h1>Kurslagring</h1>
+        </div>
+    </div>
+
+    <!--POPUP FÖR ATT LÄGGA TILL KURS-->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form method="post">
+                <label for="coursecode">Kurskod:</label>
+                <input type="text" id="coursecode" name="coursecode">
+                <label for="coursename">Kursnamn:</label>
+                <input type="text" id="coursename" name="coursename">
+                <label for="progression">Progression:</label>
+                <input type="text" id="progression" name="progression">
+                <label for="syllabys">Länk till kursplan:</label>
+                <input type="text" id="syllabus" name="syllabus">
+                <input type="submit" value="Lägg till kurs">
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="course-container">
+            <!--Container som uppdateras med DOM-manipulation-->
+            <div class="courselist-container"></div>
+            <!-- Knapp för att öppna popup -->
+            <button id="myBtn">Lägg till ny kurs</button>
+        </div>
+    </div>
+</body>
