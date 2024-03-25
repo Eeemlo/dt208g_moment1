@@ -29,7 +29,12 @@
                 <label for="coursename">Kursnamn:</label>
                 <input type="text" id="coursename" name="coursename">
                 <label for="progression">Progression:</label>
-                <input type="text" id="progression" name="progression">
+                <select id="progression" name="progression">
+                    <option value="" disabled selected hidden>Välj progression:</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
                 <label for="syllabys">Länk till kursplan:</label>
                 <input type="text" id="syllabus" name="syllabus">
                 <input type="submit" value="Lägg till kurs">

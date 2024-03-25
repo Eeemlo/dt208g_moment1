@@ -5,24 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
     var closeBtn = document.querySelector(".close"); //Kryss för att stänga popup
     var form = document.querySelector(".courseform");
     var courseListContainer = document.querySelector(".courselist-container");
-    var coursecodeInput = document.getElementById("coursecode");
-    var coursenameInput = document.getElementById("coursename");
-    var progressionInput = document.getElementById("progression");
-    var syllabusInput = document.getElementById("syllabus");
+    var coursecodeInput = document.querySelector("#coursecode");
+    var coursenameInput = document.querySelector("#coursename");
+    var progressionInput = document.querySelector("#progression");
+    var syllabusInput = document.querySelector("#syllabus");
     var deleteBtn = document.querySelector("#deleteBtn"); //Knapp för att öppna popup
     //Ladda in sparade kurser vid sidladdning
     displayCourses();
     // Kontrollera att modal, btn och span har validerats innan de används
     if (modal && btn && closeBtn) {
-        // When the user clicks on <button>, open the modal
+        // WÖppna popup när användare trycker på knappen för "lägg till kurs"
         btn.onclick = function () {
             modal.style.display = "block";
         };
-        // When the user clicks on <span> (x), close the modal
+        // Stäng popup när användaren trycker på kryss
         closeBtn.onclick = function () {
             modal.style.display = "none";
         };
-        // When the user clicks anywhere outside of the modal, close it
+        // Stäng popup när användaren trycker utanför popupfönstret
         window.onclick = function (event) {
             if (event.target === modal) {
                 modal.style.display = "none";

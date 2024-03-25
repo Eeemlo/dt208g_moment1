@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".close") as HTMLSpanElement; //Kryss för att stänga popup
   const form = document.querySelector(".courseform") as HTMLFormElement;
   const courseListContainer = document.querySelector(".courselist-container") as HTMLDivElement;
-  const coursecodeInput = document.getElementById("coursecode") as HTMLInputElement;
-  const coursenameInput = document.getElementById("coursename") as HTMLInputElement
-  const progressionInput = document.getElementById("progression") as HTMLInputElement
-  const syllabusInput = document.getElementById("syllabus") as HTMLInputElement
+  const coursecodeInput = document.querySelector("#coursecode") as HTMLInputElement;
+  const coursenameInput = document.querySelector("#coursename") as HTMLInputElement
+  const progressionInput = document.querySelector("#progression") as HTMLSelectElement
+  const syllabusInput = document.querySelector("#syllabus") as HTMLInputElement
   const deleteBtn = document.querySelector("#deleteBtn") as HTMLButtonElement; //Knapp för att öppna popup
 
   //Ladda in sparade kurser vid sidladdning
@@ -18,17 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Kontrollera att modal, btn och span har validerats innan de används
   if (modal && btn && closeBtn) {
 
-    // When the user clicks on <button>, open the modal
+    // WÖppna popup när användare trycker på knappen för "lägg till kurs"
     btn.onclick = () => {
       modal.style.display = "block";
     };
 
-    // When the user clicks on <span> (x), close the modal
+    // Stäng popup när användaren trycker på kryss
     closeBtn.onclick = () => {
       modal.style.display = "none";
     };
 
-    // When the user clicks anywhere outside of the modal, close it
+    // Stäng popup när användaren trycker utanför popupfönstret
     window.onclick = (event) => {
       if (event.target === modal) {
         modal.style.display = "none";
