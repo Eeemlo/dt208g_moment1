@@ -47,11 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Funktion som lagrar kurs i localStorage
   function addCourse(course: Course): void {
-    const existingCourse = localStorage.getItem(course.coursecode);
-    if (existingCourse) {
-      alert("Kurskoden är redan tillagd, välj en annan kurskod");
-      return;
-    }
     localStorage.setItem(course.coursecode, JSON.stringify(course));
     displayCourses();
   };
