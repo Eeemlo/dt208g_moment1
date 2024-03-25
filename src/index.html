@@ -23,7 +23,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form method="post">
+            <form class="courseform" method="post">
                 <label for="coursecode">Kurskod:</label>
                 <input type="text" id="coursecode" name="coursecode">
                 <label for="coursename">Kursnamn:</label>
@@ -41,8 +41,9 @@
         <div class="course-container">
             <!--Container som uppdateras med DOM-manipulation-->
             <div class="courselist-container"></div>
-            <!-- Knapp för att öppna popup -->
-            <button id="myBtn">Lägg till ny kurs</button>
-        </div>
+             <!-- Knapp för att öppna popup -->
+             <button id="myBtn" class="button">Lägg till ny kurs</button>
+             <button id="deleteBtn" class="button">Rensa kurslistan</button>
+        </div> 
     </div>
 </body>

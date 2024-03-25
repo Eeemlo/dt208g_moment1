@@ -88,6 +88,19 @@
   }
 
   #myBtn {
+    margin-top: -30px;
+    margin-bottom: 4px;
+  }
+
+  #deleteBtn {
+    background-color: rgb(194, 25, 25);
+  }
+
+  #deleteBtn:hover {
+    background-color: rgb(161, 20, 20);
+  }
+
+  .button {
     padding: 0.7em;
     background-color: #6f909d;
     color: #fff;
@@ -100,7 +113,7 @@
     width: 100%;
 }
 
-#myBtn:hover {
+.button:hover {
     cursor: pointer;
     background-color: #5f7a85;
 }
